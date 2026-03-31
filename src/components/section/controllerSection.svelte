@@ -1,6 +1,4 @@
 <script>
-// let i = 5;
-// let start = false
 import { nui , imageSrc } from '../../stores/stores'
 </script>
 
@@ -26,8 +24,7 @@ relative">
     <div class="flex gap-[1vh]  w-full  items-end justify-center absolute bottom-[1.5vh]">
 
         <div class="flex gap-[0.5vh] items-center ">
-            <div class="flex items-center justify-center uppercase text-[rgba(114,217,255,0.9)]
-            bg-white/20 border-[0.1vh] font-bold border-white/20 rounded-[0.5vh] px-[0.5vh] text-[1.3vh]"
+            <div class="keyBox"
             class:start={$nui.isStart}>
                 G
             </div>
@@ -35,8 +32,7 @@ relative">
         </div>
 
         <div class="flex gap-[0.5vh] items-center">
-            <div class="flex items-center justify-center uppercase text-[rgba(114,217,255,0.9)]
-            bg-white/20 border-[0.1vh] font-bold border-white/20 rounded-[0.5vh] px-[0.5vh] text-[1.3vh]">
+            <div class="keyBox">
                 H
             </div>
             <p class="font-regular  text-white/80 uppercase text-[1.1vh]">เปลี่ยนมิติ</p>
@@ -46,6 +42,18 @@ relative">
 
 </div>
 <style>
+    .keyBox{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
+        color: rgba(114,217,255,0.9);
+        background: rgba(255,255,255,0.2);
+        border: 0.1vh solid rgba(255,255,255,0.2);
+        padding: 0vh 0.5vh;
+        font-size: 1.3vh;
+        border-radius: 0.5vh;
+    }
     .start{
         color: rgb(180, 69, 69);
     }

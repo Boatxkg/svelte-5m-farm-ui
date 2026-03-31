@@ -1,5 +1,4 @@
 <script>
-    // import Tomato from "../../assets/tomato.png"
     import { derived } from 'svelte/store';
     import { nui , imageSrc } from '../../stores/stores'
     import { fade } from "svelte/transition";
@@ -44,12 +43,7 @@
         animation-name: dash;
         animation-timing-function: ease;
         animation-fill-mode: forwards;
-        /* animation: dash 5s ease-out infinite; */
     }
-
-    /* circle.active:nth-child(2){
-        animation: dash 5s ease-out ;
-    } */
 
     @keyframes dash{
         0%{

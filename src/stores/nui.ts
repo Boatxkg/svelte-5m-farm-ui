@@ -1,9 +1,7 @@
 import { nui } from "./stores.js";
-import { get } from "svelte/store";
 
 export function handleMessage(event: MessageEvent) {
     const data = event?.data;
-    console.log(JSON.stringify(data, null, '\t'));
     switch (data?.type) {
         case "open":
             if(!data?.name) return
@@ -24,8 +22,6 @@ export function handleMessage(event: MessageEvent) {
         break
         case "openWorldSelect":
             nui.update((state) => ({ ...state, isModal: true }));
-            nui.update((state) => ({ ...state, dimentionList: data?.list }));
-            console.log(get(nui));
             break
         case "autoFarmStatus":
             if(data?.state === "start"){
@@ -59,7 +55,6 @@ export function handleMessage(event: MessageEvent) {
                 nui.update((state) => ({ ...state, progressDuration: 0 }));
                 nui.update((state) => ({ ...state, progressStart: false }));
             }, data?.time);
-            console.log(get(nui));
             break
     }
 }

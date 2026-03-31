@@ -1,6 +1,5 @@
 <script>
 import { fade , fly } from "svelte/transition";
-let i = 6;
 import { nui } from '../../stores/stores'
 
 function goToAnotherWorld(world){

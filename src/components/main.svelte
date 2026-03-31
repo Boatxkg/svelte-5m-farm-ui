@@ -2,13 +2,11 @@
     import ProgressSection from "./section/progressSection.svelte";
     import ControllerSection from "./section/controllerSection.svelte";
     import Modal from "./Modal/modal.svelte";
-    import { fade, fly } from "svelte/transition";
+    import { fly } from "svelte/transition";
     import { nui } from '../stores/stores'
 </script>
 
 <main class="container-full w-[100vw] h-[100vh] flex justify-center items-end" transition:fly={{y: 25, duration: 300}}>
-
-    <!-- <button class="absolute top-4 right-4 bg-red-500 text-white px-4 py-2 rounded" onclick={() => $nui.isModal = !$nui.isModal}>Close Modal</button> -->
 
 {#if $nui.isModal}
  <Modal/>
@@ -54,34 +52,10 @@
     background: rgba(255,255,255,0.10);
     border: 0.2vh solid rgba(255,255,255,0.1);
 }
-
-/* @keyframes circle{
-    0%{
-        transform: translateY(0);
-        filter: brightness(0.5) blur(24px);
-    }
-    50%{
-        transform: translateY(5vh);
-        filter: brightness(1) blur(24px);
-    }
-    100%{
-        transform: translateY(0vh);
-        filter: brightness(0.5) blur(24px);
-    }
-} */
 .backgroundCustom{
     will-change: transform;
     filter: blur(2vh);
     background: linear-gradient(to bottom,rgba(114,217,255,1) , rgba(1,121,188));
     border-radius: 50%;
 }
-/* .backgroundCustom:nth-child(1){
-    animation: circle 5s ease infinite;
-}
-.backgroundCustom:nth-child(2){
-    animation: circle 7s ease infinite;
-}
-.backgroundCustom:nth-child(3){
-    animation: circle 4s ease infinite reverse;
-} */
 </style>
